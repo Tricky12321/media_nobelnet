@@ -37,13 +37,13 @@ use MediaNobelnet\Functions;
 <div class="container giant">
     <div class="row">
         <div class="col-6">
-            <form action="http://media.nobelnet.dk/" method="post">
+            <form action="/" method="post">
                 <input class="hidden" type="text" value="on" name="action">
                 <input type="submit" class="giant btn btn-success" value="Projector ON">
             </form>
         </div>
         <div class="col-6">
-            <form action="http://media.nobelnet.dk/" method="post">
+            <form action="/" method="post">
                 <input class="hidden" type="text" value="off" name="action">
                 <input type="submit" class="giant btn btn-danger" value="Projector OFF">
             </form>
@@ -51,13 +51,13 @@ use MediaNobelnet\Functions;
     </div>
     <div class="row">
         <div class="col-6">
-            <form action="http://media.nobelnet.dk/" method="post">
+            <form action="/" method="post">
                 <input class="hidden" type="text" value="chromecast" name="action">
                 <input type="submit" class="giant btn btn-primary" value="Chromecast">
             </form>
         </div>
         <div class="col-6">
-            <form action="http://media.nobelnet.dk/" method="post">
+            <form action="/" method="post">
                 <input class="hidden" type="text" value="HDMI" name="action">
                 <input type="submit" class="giant btn btn-primary" value="HDMI">
             </form>
@@ -65,7 +65,7 @@ use MediaNobelnet\Functions;
     </div>
 
     <div class="row">
-        <form action="http://media.nobelnet.dk/" method="post">
+        <form action="/" method="post">
             <div class="col-6">
                 <div class="form-group">
                     <input class="hidden" type="text" value="volume" name="action">
