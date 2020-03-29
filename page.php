@@ -57,19 +57,17 @@ use MediaNobelnet\Functions;
         <div class="col-6">
             <form action="http://media.nobelnet.dk/" method="post">
                 <input class="hidden" type="text" value="HDMI" name="action">
-                <input type="submit" class="giant btn btn btn-primary" value="HDMI">
+                <input type="submit" class="giant btn btn-primary" value="HDMI">
             </form>
         </div>
     </div>
 
     <div class="row">
         <form action="http://media.nobelnet.dk/" method="post">
-            <input class="hidden" type="text" value="volume" name="action">
-
             <div class="col-6">
                 <div class="form-group">
-                    <label for="exampleFormControlSelect1">Volume</label>
-                    <select class="form-control" id="exampleFormControlSelect1" name="volume">
+                    <input class="hidden" type="text" value="volume" name="action">
+                    <select class="form-control" id="VolumeSelector" name="volume">
                         <?php
                             $volume = $this->getVolume();
                             for ($i = $this->getLimit(); $i < -30; $i--) {
@@ -80,7 +78,7 @@ use MediaNobelnet\Functions;
                 </div>
             </div>
             <div class="col-6">
-                <input type="submit" class="giant btn btn btn-primary" value="Set volume">
+                <input type="submit" class="btn btn-lg btn-primary" value="Set volume">
             </div>
         </form>
     </div>

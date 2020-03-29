@@ -2,6 +2,7 @@
 namespace MediaNobelnet;
 
 
+
 class Functions {
 
 
@@ -43,7 +44,7 @@ class Functions {
                 try {
                     $volume = intval(strtolower($_POST['volume']));
                     exec("mediactl receiver volume $volume");
-                } catch ($exception) {
+                } catch (\Exception $exception) {
                     // Ignore
                 }
                 break;
