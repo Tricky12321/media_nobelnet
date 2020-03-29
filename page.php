@@ -1,7 +1,6 @@
 <?php
 
 use MediaNobelnet\Functions;
-
 /** @var $this Functions */
 
 
@@ -17,6 +16,9 @@ use MediaNobelnet\Functions;
         .giant {
             width: 100%;
             height: 200px;
+        }
+        .wide {
+            width: 100%;
         }
 
         .row {
@@ -70,7 +72,6 @@ use MediaNobelnet\Functions;
                 <select class="form-control" id="VolumeSelector" name="volume">
                     <?php
                     $volume = $this->getVolume();
-
                     for ($i = $this->getLimit(); $i >= -30; $i--) {
                         $selected = $volume == $i ? "selected" : '';
                         echo "<option " . $selected . ">$i</option>";
@@ -79,8 +80,7 @@ use MediaNobelnet\Functions;
                 </select>
             </div>
             <div class="col-6">
-                <input type="submit" class="btn btn-lg btn-primary" value="Set volume">
-
+                <input type="submit" class="btn wide btn-primary" value="Set volume">
             </div>
         </div>
     </form>
