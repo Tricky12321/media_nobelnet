@@ -80,7 +80,7 @@ use MediaNobelnet\Functions;
 
                         for ($i = $limit; $i > -30; $i--) {
                             $selected = $volume == $i ? "selected" : '';
-                            echo "<option " . $volume . ">$i</option>";
+                            echo "<option " . $selected . ">$i</option>";
                         }
                         ?>
                     </select>
