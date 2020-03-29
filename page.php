@@ -1,5 +1,7 @@
 <?php
+
 use MediaNobelnet\Functions;
+
 /** @var $this Functions */
 
 
@@ -69,10 +71,14 @@ use MediaNobelnet\Functions;
                     <input class="hidden" type="text" value="volume" name="action">
                     <select class="form-control" id="VolumeSelector" name="volume">
                         <?php
-                            $volume = $this->getVolume();
-                            for ($i = $this->getLimit(); $i < -30; $i--) {
-                                echo "<option".$volume == $i ? "selected" : ''.">$i</option>";
-                            }
+                        $volume = $this->getVolume();
+                        $limit = $this->getLimit();
+                        var_dump($volume);
+                        var_dump($limit);
+                        for ($i = $limit; $i < -30; $i--) {
+                            $selected = $volume == $i ? "selected" : '';
+                            echo "<option " . $volume . ">$i</option>";
+                        }
                         ?>
                     </select>
                 </div>
