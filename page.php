@@ -69,13 +69,16 @@ use MediaNobelnet\Functions;
             <div class="col-6">
                 <div class="form-group">
                     <input class="hidden" type="text" value="volume" name="action">
+                    <?php
+                    $volume = $this->getVolume();
+                    $limit = $this->getLimit();
+                    var_dump($volume);
+                    var_dump($limit);
+                    ?>
                     <select class="form-control" id="VolumeSelector" name="volume">
                         <?php
-                        $volume = $this->getVolume();
-                        $limit = $this->getLimit();
-                        var_dump($volume);
-                        var_dump($limit);
-                        for ($i = $limit; $i < -30; $i--) {
+
+                        for ($i = $limit; $i > -30; $i--) {
                             $selected = $volume == $i ? "selected" : '';
                             echo "<option " . $volume . ">$i</option>";
                         }
