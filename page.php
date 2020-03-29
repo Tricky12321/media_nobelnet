@@ -16,6 +16,7 @@ use MediaNobelnet\Functions;
         .giant {
             width: 100%;
             height: 200px;
+            font-size: 30pt;
         }
         .wide {
             width: 100%;
@@ -27,10 +28,6 @@ use MediaNobelnet\Functions;
 
         .col {
             padding: 50px;
-        }
-
-        .btn {
-            font-size: 30pt;
         }
     </style>
     <title>Media Nobelnet</title>
@@ -80,7 +77,7 @@ use MediaNobelnet\Functions;
                 </select>
             </div>
             <div class="col-6">
-                <input type="submit" class="btn wide btn-primary" value="Set volume">
+                <input type="submit" class="btn btn-lg wide btn-primary" value="Set volume">
             </div>
         </div>
     </form>
