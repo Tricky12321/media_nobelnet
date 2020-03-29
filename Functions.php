@@ -15,7 +15,7 @@ class Functions {
     }
 
     public function getVolume() {
-
+        return intval(((string) exec("mediactl receiver get volume"))[0]);
     }
 
     public function getPage() {
@@ -37,7 +37,6 @@ class Functions {
                 exec("mediactl receiver input wallhdmi");
                 break;
         }
-
         $this->getPage();
     }
 }
