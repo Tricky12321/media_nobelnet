@@ -15,7 +15,10 @@ class Functions {
     }
 
     public function getVolume() {
-        return intval(((string) exec("mediactl receiver get volume"))[0]);
+        return intval(exec("mediactl receiver get volume"));;
+    }
+    public function getLimit() {
+        return intval(exec("mediactl receiver get limit"));;
     }
 
     public function getPage() {
@@ -35,6 +38,14 @@ class Functions {
                 break;
             case 'hdmi':
                 exec("mediactl receiver input wallhdmi");
+                break;
+            case 'volume':
+                try {
+                    $volume = intval(strtolower($_POST['volume']));
+                    exec("mediactl receiver volume $volume");
+                } catch ($exception) {
+                    // Ignore
+                }
                 break;
         }
         $this->getPage();

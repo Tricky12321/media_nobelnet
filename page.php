@@ -1,3 +1,9 @@
+<?php
+use MediaNobelnet\Functions;
+/** @var $this Functions */
+
+
+?>
 <html lang="dk">
 <head>
     <link rel="stylesheet" type="text/css" href="resources/css/bootstrap.min.css"/>
@@ -58,11 +64,18 @@
 
     <div class="row">
         <form action="http://media.nobelnet.dk/" method="post">
+            <input class="hidden" type="text" value="volume" name="action">
+
             <div class="col-6">
                 <div class="form-group">
                     <label for="exampleFormControlSelect1">Volume</label>
-                    <select class="form-control" id="exampleFormControlSelect1">
-                        <option>1</option>
+                    <select class="form-control" id="exampleFormControlSelect1" name="volume">
+                        <?php
+                            $volume = $this->getVolume();
+                            for ($i = $this->getLimit(); $i < -30; $i--) {
+                                echo "<option".$volume == $i ? "selected" : ''.">$i</option>";
+                            }
+                        ?>
                     </select>
                 </div>
             </div>
@@ -70,7 +83,6 @@
                 <input type="submit" class="giant btn btn btn-primary" value="Set volume">
             </div>
         </form>
-
     </div>
 
 </body>
