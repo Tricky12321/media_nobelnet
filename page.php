@@ -69,7 +69,7 @@ use MediaNobelnet\Functions;
         <input class="hidden" type="text" value="volume" name="action">
         <div class="row">
             <div class="col-6">
-                <select class="form-control-lg" id="VolumeSelector" name="volume">
+                <select class="form-control-lg form-control" id="VolumeSelector" name="volume">
                     <?php
                     $volume = $this->getVolume();
                     for ($i = $this->getLimit(); $i >= -30; $i--) {
